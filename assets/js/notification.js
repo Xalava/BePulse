@@ -7,7 +7,7 @@ function notifyMe() {
   // Let's check whether notification permissions have already been granted
   else if (Notification.permission === "granted") {
     // If it's okay let's create a notification
-    var notification = new Notification("Nouveau Défi!");
+    var notification = new Notification("Nouveau Défi! : "+document.getElementById('titre').value);
   }
 
   // Otherwise, we need to ask the user for permission
