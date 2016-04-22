@@ -61,14 +61,14 @@ materialKit = {
             }
         });
 
-        $('#sliderDouble').noUiSlider({
-            start: [20, 60] ,
-            connect: true,
-            range: {
-                min: 0,
-                max: 100
-            }
-        });
+        // $('#sliderDouble').noUiSlider({
+        //     start: [20, 60] ,
+        //     connect: true,
+        //     range: {
+        //         min: 0,
+        //         max: 100
+        //     }
+        // });
     }
 }
 

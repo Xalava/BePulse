@@ -7,7 +7,7 @@ function notifyMe() {
   // Let's check whether notification permissions have already been granted
   else if (Notification.permission === "granted") {
     // If it's okay let's create a notification
-    var notification = new Notification("Nouveau Défi! : "+document.getElementById('titre').value);
+    var notification = spawnNotification( document.getElementById('titre').value, "assets/img/logo.png" ,"Nouveau défi Be Pulse!");
   }
 
   // Otherwise, we need to ask the user for permission
@@ -24,10 +24,14 @@ function notifyMe() {
   // want to be respectful there is no need to bother them any more.
 }Notification.requestPermission().then(function(result) {
   console.log(result);
-});function spawnNotification(theBody,theIcon,theTitle) {
+});
+
+
+function spawnNotification(theBody,theIcon,theTitle) {
   var options = {
       body: theBody,
       icon: theIcon
   }
   var n = new Notification(theTitle,options);
+  return n;
 }
